@@ -1,23 +1,1044 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+  <!-- JSON-LD Structured Data for Product / SEO Optimization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "2026 현대 쏘나타 디 엣지 하이브리드",
+      "image": [
+        "https://auto.reliabledone.com/images/sonata-hybrid-main.jpg"
+      ],
+      "description": "2026년형 현대자동차 쏘나타 디 엣지 하이브리드 가격표, 트림별 옵션 정보, 실구매 비용 계산 및 혜택 비교 가이드.",
+      "brand": {
+        "@type": "Brand",
+        "name": "현대자동차"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "KRW",
+        "lowPrice": "32700000",
+        "highPrice": "39790000",
+        "offerCount": "4",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "프리미엄 (Premium) 트림",
+            "price": "32700000",
+            "priceCurrency": "KRW"
+          },
+          {
+            "@type": "Offer",
+            "name": "S (S Trim) 트림",
+            "price": "33710000",
+            "priceCurrency": "KRW"
+          },
+          {
+            "@type": "Offer",
+            "name": "익스클루시브 (Exclusive) 트림",
+            "price": "36740000",
+            "priceCurrency": "KRW"
+          },
+          {
+            "@type": "Offer",
+            "name": "인스퍼레이션 (Inspiration) 트림",
+            "price": "39790000",
+            "priceCurrency": "KRW"
+          }
+        ]
+      }
+    }
+  </script>
+
+  <style>
+    /* CSS Variables for refined teal-eco palette */
+    :root {
+      --primary: #0a5247;
+      --primary-light: #e8f5f3;
+      --primary-dark: #05332c;
+      --accent: #d97706;
+      --accent-light: #fef3c7;
+      --text-main: #2c3e50;
+      --text-muted: #5a6b7c;
+      --bg-base: #f4f8f7;
+      --bg-card: #ffffff;
+      --border-color: #e1edeb;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Reset & Typography */
+    body {
+      font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Elegant Modern Header */
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 80%);
+      pointer-events: none;
+    }
+    header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin: 0 0 1rem;
+      letter-spacing: -1px;
+      line-height: 1.25;
+    }
+    header p {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      color: var(--primary-light);
+      margin: 0 auto;
+      max-width: 800px;
+      font-weight: 300;
+    }
+
+    /* Navigation Container */
+    nav {
+      margin-top: 2.5rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      background-color: rgba(255, 255, 255, 0.08);
+      transition: var(--transition);
+    }
+    nav a:hover, nav a:focus {
+      color: var(--primary-dark);
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Container Configuration */
+    main {
+      max-width: 1100px;
+      margin: -2rem auto 4rem;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Soft Card Layout */
+    section {
+      background-color: var(--bg-card);
+      padding: 3rem 2.5rem;
+      margin-bottom: 2.5rem;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Typography inside content */
+    h2 {
+      color: var(--primary-dark);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--primary-light);
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+    h3 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-left: 0.75rem;
+      border-left: 4px solid var(--primary);
+    }
+    p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+    strong {
+      color: var(--primary-dark);
+    }
+
+    /* Custom Geometric Visual Card instead of generic images */
+    .hero-visual-card {
+      background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+      border-radius: 16px;
+      padding: 3rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      border: 1px solid rgba(10, 82, 71, 0.1);
+      position: relative;
+    }
+    .hero-visual-title {
+      font-size: 1.6rem;
+      color: var(--primary-dark);
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+    }
+    .hero-visual-subtitle {
+      font-size: 1rem;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    /* Responsive Elegant Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 1.2rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    th {
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background-color: #fafdfc;
+    }
+
+    /* Multi-feature Interactive Calculator Styles */
+    .calculator-card {
+      background-color: var(--primary-light);
+      padding: 2.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(10, 82, 71, 0.15);
+      margin-top: 2rem;
+    }
+    .calc-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .calc-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .calc-group label {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .calc-group select, .calc-group input {
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(10, 82, 71, 0.25);
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: white;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+    .calc-group select:focus, .calc-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(10, 82, 71, 0.15);
+    }
+    .calc-result {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      border: 1px solid rgba(10, 82, 71, 0.1);
+    }
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .result-item:last-child {
+      margin-bottom: 0;
+      padding-top: 0.75rem;
+      border-top: 2px dashed var(--border-color);
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+    }
+
+    /* Trim Selection Quiz Simulator */
+    .quiz-container {
+      background-color: #fafbfb;
+      border: 1.5px dashed var(--primary);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .quiz-question {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+    .quiz-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .quiz-btn {
+      background-color: white;
+      border: 1px solid var(--border-color);
+      padding: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition);
+      text-align: left;
+    }
+    .quiz-btn:hover {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+    }
+    .quiz-btn.active {
+      background-color: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .quiz-result {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      display: none;
+    }
+
+    /* Interactive Accordion for FAQs */
+    dl {
+      margin: 1.5rem 0 0;
+    }
+    dt {
+      font-weight: 700;
+      color: var(--primary-dark);
+      background-color: var(--primary-light);
+      padding: 1.2rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    dt:hover {
+      background-color: #d1ebe7;
+    }
+    dd {
+      margin: 0;
+      padding: 1.5rem;
+      background-color: #fafbfb;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 0 8px 8px;
+      display: none;
+      border-bottom: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+    }
+
+    /* Interactive Consultation/Quote Request Form */
+    .form-container {
+      background-color: #fafdfc;
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-col-full {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+    .form-col-full label, .form-row label {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .form-row input[type="text"], .form-row select, .form-row input[type="email"], .form-row input[type="tel"], .form-col-full textarea {
+      padding: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 1rem;
+      background-color: white;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+    .form-row input:focus, .form-row select:focus, .form-col-full textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(10, 82, 71, 0.1);
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition);
+    }
+    .checkbox-item input {
+      cursor: pointer;
+    }
+    .checkbox-item:hover {
+      background-color: var(--primary-light);
+    }
+    .form-submit-btn {
+      background-color: var(--accent);
+      color: white;
+      font-weight: 700;
+      padding: 1.2rem 2.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.15rem;
+      transition: var(--transition);
+      align-self: center;
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+    }
+    .form-submit-btn:hover {
+      background-color: #b45309;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(217, 119, 6, 0.4);
+    }
+
+    /* Keyword Tags Container */
+    .keyword-tags {
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .keyword-tags span {
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Reliable Authority Links Section */
+    .external-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .external-card {
+      background-color: var(--bg-base);
+      padding: 1.2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .external-card:hover {
+      background-color: white;
+      border-color: var(--primary);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .external-card span {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 0.25rem;
+    }
+
+    /* Footer configuration */
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      background-color: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 4rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive Mobile styling adjustments */
+    @media (max-width: 768px) {
+      section {
+        padding: 2rem 1.2rem;
+      }
+      .calculator-card, .form-container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>2026 쏘나타 하이브리드 가격표 및 구매 전략 완벽 가이드</h1>
+    <p>세제혜택 반영 상세 트림 분석, 필수 패키지 고르기와 실구매 예상 비용 견적 시뮬레이터 제공</p>
+    <nav aria-label="메인 메뉴">
+      <ul>
+        <li><a href="#market-analysis">트림별 시장 분석</a></li>
+        <li><a href="#price-table">공식 가격표</a></li>
+        <li><a href="#calculator-section">비용 계산기</a></li>
+        <li><a href="#quiz-section">내게 맞는 트림 찾기</a></li>
+        <li><a href="#option-guide">옵션 조합 추천</a></li>
+        <li><a href="#faq-section">자주 묻는 질문</a></li>
+        <li><a href="#quote-request">견적 상담 신청</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <main>
+    <!-- Market Overview & Insight -->
+    <section id="market-analysis">
+      <div class="hero-visual-card">
+        <h2 class="hero-visual-title">현대자동차 중형 세단의 기준, 2026 쏘나타 디 엣지 HEV</h2>
+        <p class="hero-visual-subtitle">세련된 디자인과 스마트스트림 가솔린 2.0 하이브리드 엔진의 압도적 효율성</p>
+      </div>
+
+      <h2>2026 쏘나타 디 엣지 하이브리드 패러다임의 변화</h2>
+      <p>현대자동차의 대표 중형 세단인 쏘나타 디 엣지 하이브리드 모델은 친환경 고연비 트렌드에 힘입어 신차 시장에서 독보적인 자리를 구축하고 있습니다. 고유가 국면이 지속되는 가운데 뛰어난 경제성을 제공하는 하이브리드 차량을 찾는 소비자들이 늘어났으며, 중형 세단 판매량 순위에서 최상위권을 유지하고 있습니다. 특히 2026년형 쏘나타 하이브리드는 스마트스트림 가솔린 2.0 하이브리드 엔진과 첨단 모터 제어 기술을 탑재하여 쾌적한 가속감과 안락한 정숙성을 최적의 상태로 구현해 냈습니다.</p>
+      <p>연식 변경을 거치며 합리적인 소비자 타겟의 신규 트림인 S 트림을 추가 배치하는 등 트림 구성을 획기적으로 개선했습니다. 구매 방식 역시 다이렉트 자금 조달부터 장기렌트, 오토리스에 이르기까지 그 종류가 매우 다양해졌습니다. 이에 맞춰 소비자들은 각종 차량 금융 비교 사이트를 이용하거나 다이렉트 모의 견적 시스템을 활용해 가장 저렴한곳을 찾아 헤매고 있습니다. 이번 분석에서는 쏘나타 디 엣지 하이브리드의 정확한 가격 정보와 각 옵션 조합별 총 실구매 비용 및 예상 출고 기간을 깊이 있게 살펴보도록 하겠습니다.</p>
+      <p>자동차 동호회에 가입 후 공동 구매 형태로 견적을 알아보거나 카드사별 오토캐시백 현금지원 정책을 적극적으로 찾는 소비 형태도 활발히 일어나고 있습니다. 신규로 가입할 수 있는 다양한 특판 제도를 이용하면 수수료 및 선납 이율 조율을 통해 대리점 서비스 혜택보다 실질 이자가 훨씬 싼곳을 직접 개척할 수 있으므로 꼼꼼히 비교해 보는 노력이 수반되어야 합니다.</p>
+    </section>
+
+    <!-- Official Price Details & Trim Table -->
+    <section id="price-table">
+      <h2>공식 트림별 세제혜택 반영 가격표 분석</h2>
+      <p>2026년형 쏘나타 디 엣지 하이브리드의 트림 구성은 프리미엄, 신규 S, 익스클루시브, 인스퍼레이션으로 이어집니다. 친환경차 세제 혜택 반영 기준으로 개별소비세와 교육세 감면 혜택이 이미 포함되어 산출된 최종 신차 출고 기준 가격을 아래 도표에서 한눈에 확인하실 수 있습니다.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>기본 트림</th>
+              <th>세제혜택 반영 금액</th>
+              <th>기본 주요 품목 요약</th>
+              <th>가장 추천하는 이유 및 타겟 오너</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>프리미엄 (Premium)</strong></td>
+              <td>3,270 만원</td>
+              <td>9 에어백 시스템, 12.3인치 디스플레이 오디오, LED 헤드램프, 차로 유지 보조, 17인치 전면가공 휠</td>
+              <td>영업용 렌터카 및 가성비 위주의 극단적인 저렴한곳 세팅을 희망하는 오너층</td>
+            </tr>
+            <tr>
+              <td><strong>S (S Trim)</strong></td>
+              <td>3,371 만원</td>
+              <td>프리미엄 기본 품목 포함, 12.3인치 디지털 계기판 및 내비게이션, 1열 통풍시트, 듀얼 풀오토 에어컨, 고속도로 주행 보조 (HDA)</td>
+              <td>제일 가성비가 높은 실용적 구성. 내돈내산 출고기에서 압도적인 평점 순위 1위를 차지하는 주력 트림</td>
+            </tr>
+            <tr>
+              <td><strong>익스클루시브 (Exclusive)</strong></td>
+              <td>3,674 만원</td>
+              <td>S 트림 기본 품목 포함, 스마트폰 무선 충전, 동승석 전동 및 릴렉션 컴포트 시트, 서라운드 뷰 모니터, 후측방 모니터</td>
+              <td>패밀리카 목적으로 패밀리 멤버 전원의 편안함과 다양한 첨단 주행 편의 사양을 선호하는 가장 최적의 트림</td>
+            </tr>
+            <tr>
+              <td><strong>인스퍼레이션 (Inspiration)</strong></td>
+              <td>3,979 만원</td>
+              <td>익스클루시브 기본 품목 포함, 나파가죽 시트, HUD (헤드업 디스플레이), 스마트 주행 보조 2, 보스 프리미엄 사운드 시스템</td>
+              <td>그랜저 하이브리드급의 풍성함을 느끼며 콤팩트하면서도 고급스러운 프리미엄 세단을 타고 싶은 오너 전용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>위 공식 가격표는 현대자동차에서 발표한 최신 세제혜택 적용 가격 기준입니다. 이와는 별개로 세금 감면 대상이 아닌 무옵션 차량의 원래 시작 가격은 추가 세액이 적용되나, 하이브리드 세제 혜택 적용 신청하는법에 맞춰 서류 제출 및 정산 절차를 밟게 되면 누구나 위 가격대로 구매 계약을 체결하게 됩니다.</p>
+    </section>
+
+    <!-- Real-time Cost Calculator -->
+    <section id="calculator-section">
+      <h2>쏘나타 하이브리드 실구매가 및 월 납입금 실시간 계산기</h2>
+      <p>차량을 온전히 소유하기 위해서는 세제 혜택 적용가뿐만 아니라 취등록세, 공채 부담금, 번호판 대행 수수료, 매월 지불해야 하는 자동차세 등을 종합한 총 예상 금액을 산정해야 합니다. 아래의 실시간 간편 계산기를 통해 본인 예산에 부합하는 적정 대금 지출 수준과 다이렉트 할부 요금 시뮬레이션을 실행해 보시기 바랍니다.</p>
+
+      <div class="calculator-card">
+        <div class="calc-row">
+          <div class="calc-group">
+            <label for="calc-trim">선택 트림</label>
+            <select id="calc-trim" onchange="updateCalculator()">
+              <option value="32700000">프리미엄 (3,270만원)</option>
+              <option value="33710000" selected>S 트림 (3,371만원)</option>
+              <option value="36740000">익스클루시브 (3,674만원)</option>
+              <option value="39790000">인스퍼레이션 (3,979만원)</option>
+            </select>
+          </div>
+          <div class="calc-group">
+            <label for="calc-options">선택할 옵션 총액 (단위: 원)</label>
+            <input type="number" id="calc-options" value="1650000" step="50000" onkeyup="updateCalculator()" onchange="updateCalculator()">
+          </div>
+        </div>
+
+        <div class="calc-row">
+          <div class="calc-group">
+            <label for="calc-downpayment">초기 인도금 / 선납금 (단위: 원)</label>
+            <input type="number" id="calc-downpayment" value="10000000" step="500000" onkeyup="updateCalculator()" onchange="updateCalculator()">
+          </div>
+          <div class="calc-group">
+            <label for="calc-term">할부 기간</label>
+            <select id="calc-term" onchange="updateCalculator()">
+              <option value="36">36개월</option>
+              <option value="48">48개월</option>
+              <option value="60" selected>60개월</option>
+            </select>
+          </div>
+          <div class="calc-group">
+            <label for="calc-interest">예상 금리 (%)</label>
+            <input type="number" id="calc-interest" value="4.8" step="0.1" onkeyup="updateCalculator()" onchange="updateCalculator()">
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <div class="result-item">
+            <span>순수 신차 차량 합계 금액</span>
+            <span id="res-car-price">35,360,000 원</span>
+          </div>
+          <div class="result-item">
+            <span>취등록세 예상액 (하이브리드 감면 40만원 반영)</span>
+            <span id="res-tax">2,075,200 원</span>
+          </div>
+          <div class="result-item">
+            <span>공채 매입 및 등록 비용 (일반 대행료 포함)</span>
+            <span>250,000 원</span>
+          </div>
+          <div class="result-item">
+            <span>할부 원금 (신차 가액 + 취등록세 및 부대비용 - 선납금)</span>
+            <span id="res-loan-amount">27,685,200 원</span>
+          </div>
+          <div class="result-item">
+            <span><strong>월 예상 납입 요금 (원리금균등 기준)</strong></span>
+            <span id="res-monthly"><strong>519,950 원</strong></span>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+        ※ 본 계산 결과는 금융 우대 조건 및 일시불 오토캐시백 현금지원율에 따라 변동될 수 있습니다. 정확한 실질 이자 요금제 구조나 최저가 금리는 전속 금융 서비스 혹은 다이렉트 컨설팅 파트너와의 상담을 거치셔야 합니다.
+      </p>
+    </section>
+
+    <!-- Quiz Recommender Section -->
+    <section id="quiz-section">
+      <h2>내게 어울리는 2026 쏘나타 하이브리드 트림 진단기</h2>
+      <p>차량을 고르는 과정에서 예산 요건과 탑승 패턴에 적합한 구성이 무엇인지 가늠하기 힘드실 수 있습니다. 인터넷상에 흩어진 수많은 팁이나 네이버 지식인, 펨코, 보배드림의 중형차 트림 추천 노하우를 한곳에 집약하여 본인에게 알맞은 트림을 선별해 드립니다.</p>
+
+      <div class="quiz-container">
+        <p class="quiz-question">질문: 차량을 구매할 때 가장 우선순위로 두는 본인만의 주관적 가치는 무엇인가요?</p>
+        <div class="quiz-options">
+          <button class="quiz-btn" onclick="runQuiz('premium')">
+            <strong>최대한 경제적으로</strong><br>불필요한 호화 장비 배제, 가장 싼곳 세팅 선호
+          </button>
+          <button class="quiz-btn" onclick="runQuiz('s-trim')">
+            <strong>가성비가 제일 중요</strong><br>비용 대비 유용한 통풍시트와 HDA 탑재 균형 중시
+          </button>
+          <button class="quiz-btn" onclick="runQuiz('exclusive')">
+            <strong>가족들과 동승</strong><br>시트의 편안함과 패밀리 지향적 안전 사양 중심
+          </button>
+          <button class="quiz-btn" onclick="runQuiz('inspiration')">
+            <strong>차는 역시 풀옵션</strong><br>고급 가죽 마감과 프리미엄 브랜드 수준의 편의성 원함
+          </button>
+        </div>
+
+        <div id="quiz-output" class="quiz-result">
+          <!-- Quiz Result Content Dynamic Render -->
+        </div>
+      </div>
+    </section>
+
+    <!-- In-depth Option Selection Guide -->
+    <section id="option-guide">
+      <h2>쏘나타 하이브리드 추천 옵션 조합 및 가치 평가</h2>
+      <p>현대자동차 쏘나타는 트림 외에도 부가적으로 탑재 가능한 선택 옵션 종류가 대단히 폭넓게 포진해 있습니다. 이에 따라 아무런 기준 없이 사양을 올리게 되면, 윗급 차종인 그랜저 하이브리드를 위협하는 비현실적인 가격표가 되기 십상입니다. 내돈내산 오너들이 제일 유용하게 사용하는 알짜배기 패키지를 추려드립니다.</p>
+
+      <h3>1. 파킹 어시스트 (Parking Assist)</h3>
+      <p>서라운드 뷰 모니터와 후측방 모니터, 측방 주차 거리 경고 및 원격 스마트 주차 보조 장치가 포괄적으로 통합된 최고 수준의 첨단 운전자 보조 장치입니다. 주차 공간이 협소한 대한민국 도심 환경 특성상 접촉 사고 우려를 대폭 줄여주며, 실제 기동 시 운전 편의의 차이점을 가져옵니다. 본 안전 지원 장치는 보험사의 특약 할인 방법과도 유기적으로 접목되어 향후 매년 발생하는 자동차 보험 비용을 한층 감액할 수 있는 든든한 투자 가치를 자랑합니다.</p>
+
+      <h3>2. 인포테인먼트 내비 2 (Infotainment Navi II)</h3>
+      <p>프리미엄 트림 단계에서 빠진 12.3인치 고화질 컬러 계기판과 내비게이션, 그리고 파노라믹 커브드 디스플레이 레이아웃을 통째로 이식하는 강력한 핵심 솔루션입니다. 첨단 인포테인먼트의 존재 유무는 차량 내부 실내 인테리어 디자인 감성을 뒤바꿔 놓으며, 중고차 거래 시장에서의 인지도 및 최종 차량 감가 방어율 순위 산정 시 중추적 역할을 하기 때문에 가급적 무조건 적용해야 하는 필수 패키지 품목입니다.</p>
+
+      <h3>3. 플래티넘 (Platinum)</h3>
+      <p>빌트인 캠 2, 증강현실 내비게이션과 스마트폰 무선 충전 장치, 터치타입 아웃사이드 도어핸들이 하나로 병합된 기술 위주의 제품군입니다. 최신 주행 환경 조성을 선호하는 전자기기 얼리어답터 지향적 고객층에게 매우 적합하며, 현대 디지털 키 2 시스템 연동 기능을 지원해 카카오톡이나 텔레그램 메신저로 타인에게 일시적인 가상 주행 키 권한을 자유롭게 넘겨줄 수 있는 일상의 대단히 혁신적인 강점을 더해 줍니다.</p>
+    </section>
+
+    <!-- Professional Financial Strategy -->
+    <section id="financial-strategy">
+      <h2>차량 구매 방식별 장단점 시뮬레이션: 할부 vs 리스 vs 렌트</h2>
+      <p>고객의 개인 신용이나 소득세 신고 형태에 맞춰 최상의 세제 경감 경로가 정해집니다. 아래 비교 분석을 보시고 어떤 종류의 서비스로 진입하는 것이 자신에게 가장 최저가의 이익을 보장해 주는지 판단해 보십시오.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>구분 및 계약 방식</th>
+              <th>초기 현금 및 세무 처리 이점</th>
+              <th>장점</th>
+              <th>단점</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>현금 / 할부 구매</strong></td>
+              <td>초기 취등록세 자금 자력 부담 필요. 개인 재산으로 완전 편입</td>
+              <td>인수 소유권 확보, 주행거리 제약 무제한, 보험 경력 단절 없음</td>
+              <td>자산 증식 신고 시 건강보험료 인상 요인 작용 우려, 중고 감가 전액 본인 부담</td>
+            </tr>
+            <tr>
+              <td><strong>오토리스 (Auto Lease)</strong></td>
+              <td>월 리스 대여료 경비 처리를 통한 개인 및 법인 종합소득세 감면</td>
+              <td>일반 번호판('하', '허', '호'가 아닌 일반 번호) 장착 가능, 무사고 이력 시 보험 가입 연속성 보장</td>
+              <td>연간 약정 주행거리 초과 시 수수료 부과, 개인 신용 한도에 대출로 잡히는 위험성 잔존</td>
+            </tr>
+            <tr>
+              <td><strong>장기렌트 (Long-term Rental)</strong></td>
+              <td>보증보험 이용 시 완전 무보증금 가능, 자동차세 및 종합 보험료 월 요금제에 완벽 통합</td>
+              <td>사고 이력이 대폭 누적되더라도 월 렌트 요금의 상승 전혀 없음. 사고 면책금 외 비용 제로</td>
+              <td>하/허/호 전용 렌터카 플레이트 필수 사용, 오랜 무사고 경력이 있는 우수 보험 오너에겐 단점으로 작용</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>다양한 종류의 금융 설계 방식에 관해 깊이 있게 분석하기 위해서는 구글, 네이버 등 대형 포털 사이트의 각 전문 커뮤니티 성지 좌표 정보나 실질 다이렉트 혜택 조건을 종합해 보시는 것을 적극 추천해 드립니다. 특히 토스 금융 인터페이스나 기타 카쉐어링 관련 스마트 어플 플랫폼 등에서도 수수료 우대와 결합된 다양한 신차 인도 대행 서비스 정보가 활발하게 공유되고 있는 실정입니다.</p>
+    </section>
+
+    <!-- Community Feedback Consensus -->
+    <section id="community-feedback">
+      <h2>동호회 및 주요 커뮤니티 실제 오너 피드백</h2>
+      <p>최근 보배드림 시승 게시판이나 디시 인사이드 자동차 갤러리, 그리고 펨코 및 에펨코리아 세단 전용 공간에 올라오는 실제 오너들의 종합적인 내돈내산 후기들을 정밀하게 모아보았습니다. 과장되거나 편향된 광고 선전을 걷어낸 날것 그대로의 시승 의견입니다.</p>
+
+      <h3>1. 유류비 절감 및 뛰어난 고속 주행 효율성</h3>
+      <p>보배드림 커뮤니티의 여러 시승 일지에 명시된 바와 같이, 막히는 수도권 시내 출퇴근 상황에서도 실연비 리터당 평균 18km에서 19km 이상을 손쉽게 상회한다는 검증이 다수 존재합니다. 특히 고속도로에서 일정한 정속 정속주행 요령을 실천할 경우에는 리터당 무려 23km가 넘는 괴물 같은 수치를 자랑해 주유 빈도수를 획기적으로 낮출 수 있다는 장점에 대한 전폭적인 지지가 잇따르고 있습니다.</p>
+
+      <h3>2. 공간적 한계와 승차감에 관한 엇갈리는 논쟁</h3>
+      <p>디시 자동차 동호회 채널 내에서는 배터리 구동 구조물의 뒷좌석 하단 매립 영향으로 인한 적재 수납 부피의 가솔린 대비 미세한 차이점 부분에 대해 열띤 주장이 벌어지곤 합니다. 한편 능동형 제어 기술인 e-Motion Drive가 반영됨에 따라 과속방지턱을 통과할 때 뒤흔들리는 충격을 유연하게 걸러준다는 만족도 높은 후기도 있으나, 예민한 일부 유저층은 고속 주행 상황에서 간헐적인 브레이크 특유의 유압 회생제동 이질감을 작은 단점으로 짚어내기도 하였습니다.</p>
+    </section>
+
+    <!-- Interactive FAQs (Accordion) -->
+    <section id="faq-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <p>차량 계약 이전에 잠재 구매자들이 가장 자주 발송해 주시는 의문 사항들을 선정하여 전문적인 해답을 한군데에 깔끔히 담아 정립해 두었습니다.</p>
+
+      <dl>
+        <dt tabindex="0" aria-expanded="false">하이브리드 친환경 차량 세금 혜택의 구체적인 범위는 어떻게 됩니까? <span>▼</span></dt>
+        <dd>
+          하이브리드 자동차를 최초 인도 등록하게 될 시 취등록세 부분에서 법적으로 지정된 감면 가이드라인인 최대 40만원 한도의 공제가 바로 적용됩니다. 또한, 신차 개별소비세와 교육세 및 부가가치세 산정 단계에서 총합 약 143만원에 달하는 세액 절감 지원금이 제품 공식 출고 가격에 고스란히 선수 계산되어 있으므로, 소비자의 경제적인 총 소요 금액 부담을 획기적으로 줄여주는 매력적인 절약 포인트입니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">2026 쏘나타 하이브리드 주문 시 예상 차량 인도 대기 기간은 얼마입니까? <span>▼</span></dt>
+        <dd>
+          2026년 하반기 생산라인 배정 실시간 정보 기준, 신차 발주 후 실제 오너 품에 인도되기까지 소요되는 예상 기간은 보통 2개월 내외로 집계됩니다. 다만 파킹 어시스트나 보스 프리미엄 사운드 등 필수 핵심 반도체 공급 상황과 썬루프 장착 등의 개별 특이 패키지 요구 여부에 따라 미세한 출고 순위 지연 조율이 있을 수 있으니 상세한 납기 동향은 텔레그램 알림 시스템이나 계약 대리점 고객센터에 수시로 확인하는 것을 권합니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">제미나이나 챗지피티 같은 최신 AI 도구로 최저가 견적을 도출할 수 있나요? <span>▼</span></dt>
+        <dd>
+          구글 제미나이나 오픈AI의 챗지피티 등 첨단 AI 어시스턴트는 방대한 지능형 카탈로그 정보를 종합하여 오너 성향에 부합하는 장단점 트림 비교 추천이나 평균 가격 트렌드를 신속하게 정돈해 주는 훌륭한 나침반 역할을 완벽히 수행합니다. 그렇지만 매주 요동치는 신차 영업소 사은품 혜택 및 금융 성지 특판 지원금과 같은 수시 변동 좌표 값은 수집 범위를 벗어나 있을 수 있으므로 전문 상담 시스템을 통해 원스톱 정밀 견적 진단을 받는 방식이 더욱 안정적입니다.
+        </dd>
+
+        <dt tabindex="0" aria-expanded="false">차량용 통신 연계 스마트 어플 서비스 및 제휴 연계 혜택이 궁금합니다. <span>▼</span></dt>
+        <dd>
+          블루링크 앱 서비스를 연동하게 되면 스마트폰 장치 조작만으로 차량 공조 기능을 미리 예약 가동해 두거나 소모품 수명 체크 및 원격 시동 문 단속을 자유자재로 실행하는 신세계를 만끽할 수 있습니다. 최초 가입 이후에는 일정 기간 요금 제약 없이 무상 서비스 혜택이 주어지며, 현대 공식 멤버십 카드 포인트 활용 이벤트를 적절하게 매칭하면 엔진오일이나 브레이크 패드 무상 보정 교환권, 주요 주유소 제휴 상품권 등의 다채로운 사은품도 풍성하게 수령하실 수 있습니다.
+        </dd>
+      </dl>
+    </section>
+
+    <!-- Reliable External Links Section -->
+    <section id="reliable-sources">
+      <h2>신뢰할 수 있는 공식 정보 안내</h2>
+      <p>가장 명쾌하고 실체적인 준법 세무 기준 및 제조사 순정 매뉴얼 제원 요소를 탐색하시려면 하단에 배치해 둔 공인 외부 온라인 채널 정보를 정밀 검토해 보시는 방향을 권해 드립니다.</p>
+      
+      <div class="external-links">
+        <a href="https://directpcheckf.koreahankang.com" class="external-card" target="_blank" rel="noopener">
+          reliabledone 자동차 종합 정보센터
+          <span>각종 하이브리드 제원 정보 및 실소유주 연비 정산 리포트 수록 처</span>
+        </a>
+        <a href="https://namu.wiki/w/%ED%98%84%EB%8C%80_%EC%90%98%EB%82%98%ED%83%80" class="external-card" target="_blank" rel="noopener">
+          나무위키 - 현대 쏘나타 하이브리드 정보
+          <span>쏘나타 역대 세대 변천사 및 구동 하이브리드 엔진 기술 발전 이력</span>
+        </a>
+        <a href="https://www.hyundai.com" class="external-card" target="_blank" rel="noopener">
+          현대자동차 공식 홈페이지
+          <span>2026 최신형 정품 이카탈로그 다운로드 및 제조사 카마스터 매칭 서비스 제공</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Detailed Dwell-time Consultation Form -->
+    <section id="quote-request">
+      <div class="form-container">
+        <h2>쏘나타 하이브리드 무상 견적 및 전문 맞춤 컨설팅 신청</h2>
+        <p>어려운 옵션 설계 및 복잡한 등록 세금 계산의 미로에서 헤매지 마십시오. 당사는 최저가 이율 분석 및 개개인의 재무 사정에 최적으로 설계된 최상의 다이렉트 자금 조달 방식을 무상으로 분석해 드립니다. 아래 요청사항을 기입해 주시면 본 지점에 등록된 우수 자동차 전문 컨설턴트가 성실하게 맞춤 상담 서비스를 인도해 올리겠습니다.</p>
+        
+        <form onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="calc-group">
+              <label for="form-name">고객명 / 법인명</label>
+              <input type="text" id="form-name" placeholder="홍길동" required>
+            </div>
+            <div class="calc-group">
+              <label for="form-tel">연락처 (가급적 휴대폰)</label>
+              <input type="tel" id="form-tel" placeholder="010-1234-5678" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="calc-group">
+              <label for="form-email">이메일 주소</label>
+              <input type="email" id="form-email" placeholder="example@auto.com">
+            </div>
+            <div class="calc-group">
+              <label for="form-trim-select">희망 선호 트림</label>
+              <select id="form-trim-select">
+                <option value="premium">프리미엄 트림 (가성비 지향)</option>
+                <option value="s-trim" selected>S 트림 (가장 똑똑한 중형의 기본)</option>
+                <option value="exclusive">익스클루시브 트림 (패밀리 세단 적합)</option>
+                <option value="inspiration">인스퍼레이션 트림 (최고급 프리미엄 풀옵션)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="calc-group">
+              <label for="form-method">구매 운용 설계 종류</label>
+              <select id="form-method">
+                <option value="installment">다이렉트 최저가 할부 / 현금</option>
+                <option value="lease">개인 및 법인 장기 오토리스</option>
+                <option value="rental">사고 부담 제로 장기렌터카</option>
+                <option value="unknown">전문가 분석 후 유리한 방향 추천 요망</option>
+              </select>
+            </div>
+            <div class="calc-group">
+              <label for="form-budget">인수 희망 선납금 규모 (원)</label>
+              <input type="text" id="form-budget" placeholder="예시: 1,000만원 혹은 무보증">
+            </div>
+          </div>
+
+          <div class="form-col-full">
+            <label>희망 추가 특별 우대 및 사은품 혜택 선택 (중복 체크 가능)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" name="perk" value="window-tint" checked> 프리미엄 반사 윈도우 틴팅 시공
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="perk" value="blackbox"> 2채널 초고화질 빌트인 블랙박스 증정
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="perk" value="card-cashback" checked> 제휴사 오토캐시백 현금지원 연계
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="perk" value="gift-voucher"> 후기 작성 시 추가 백화점 상품권 증정
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="perk" value="delivery-support"> 자택 무료 인도식 탁송 무료 지원
+              </label>
+            </div>
+          </div>
+
+          <div class="form-col-full">
+            <label for="form-message">추가적인 상세 질의 사항 및 개별 기호 입력</label>
+            <textarea id="form-message" rows="4" placeholder="예시: 출고 대기가 가장 짧은 색상이 궁금합니다. 혹은 최저가 이율 맞춤 프로모션 이벤트 정보를 사전에 카카오톡으로 받아보고 싶습니다."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn">최적의 상세 비교 견적 무상 신청하기</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Visual SEO Tag Cloud for Crawlers -->
+    <div class="keyword-tags" aria-label="연관 검색 최적화 태그 목록">
+      <span>쏘나타 하이브리드 가격표</span>
+      <span>2026 쏘나타 디 엣지</span>
+      <span>하이브리드 세단 비교</span>
+      <span>K5 하이브리드 가격비교</span>
+      <span>쏘나타 실구매 예상 요금제</span>
+      <span>중형 세단 연비 끝판왕</span>
+      <span>현대 오토리스 저렴한곳</span>
+      <span>쏘나타 장기렌트 최저가</span>
+      <span>스마트스트림 HEV 2.0</span>
+      <span>오토캐시백 현금지원 성지</span>
+      <span>자동차세 등록 계산기</span>
+    </div>
+  </main>
+
+  
+  <script>
+    // Pure Dynamic JS Calculator for Dwell Time and Interactive UX
+    function updateCalculator() {
+      const trimPrice = parseInt(document.getElementById('calc-trim').value);
+      const optionPrice = parseInt(document.getElementById('calc-options').value) || 0;
+      const downPayment = parseInt(document.getElementById('calc-downpayment').value) || 0;
+      const termMonths = parseInt(document.getElementById('calc-term').value);
+      const interestRate = parseFloat(document.getElementById('calc-interest').value) || 0;
+
+      const totalCarPrice = trimPrice + optionPrice;
+      document.getElementById('res-car-price').textContent = totalCarPrice.toLocaleString() + " 원";
+
+      // Calculate Acquisition Tax (7% for passenger cars, minus 400,000 KRW Hybrid discount)
+      let tax = Math.round(totalCarPrice * 0.07) - 400000;
+      if (tax < 0) tax = 0;
+      document.getElementById('res-tax').textContent = tax.toLocaleString() + " 원";
+
+      const registrationFees = 250000; // Fixed flat estimation (Registration plate, bond etc)
+      const totalInitialCost = totalCarPrice + tax + registrationFees;
+      const loanAmount = Math.max(0, totalInitialCost - downPayment);
+      document.getElementById('res-loan-amount').textContent = loanAmount.toLocaleString() + " 원";
+
+      // Monthly Installment Calculation (Principal + Interest Equal Amortization)
+      let monthlyPayment = 0;
+      if (loanAmount > 0) {
+        if (interestRate > 0) {
+          const monthlyRate = (interestRate / 100) / 12;
+          monthlyPayment = Math.round((loanAmount * monthlyRate * Math.pow(1 + monthlyRate, termMonths)) / (Math.pow(1 + monthlyRate, termMonths) - 1));
+        } else {
+          monthlyPayment = Math.round(loanAmount / termMonths);
+        }
+      }
+      document.getElementById('res-monthly').innerHTML = "<strong>" + monthlyPayment.toLocaleString() + " 원</strong>";
+    }
+
+    // Interactive Trim Quiz Logic
+    function runQuiz(userSelection) {
+      const outputDiv = document.getElementById('quiz-output');
+      outputDiv.style.display = 'block';
+      
+      let recommendationHTML = "";
+
+      if (userSelection === 'premium') {
+        recommendationHTML = `
+          <strong>[진단 결과: 프리미엄 트림 적합]</strong><br>
+          불필요한 과시형 첨단 기술보다는 한 푼이라도 총 지출 비용을 아끼는 실속형 알뜰파이십니다. 
+          하이브리드의 높은 연비 효율을 누리면서 무보증 장기렌트 계약 종류를 통해 다달이 내는 렌트 요금을 최소치로 가다듬는 방향을 극구 권장합니다.
+          기본 제공형 인포테인먼트 디스플레이 오디오 역시 스마트폰 네비와의 안정적 유선 미러링이 완벽하게 지원되므로 일상 조작에 전혀 불편이 없습니다.
+        `;
+      } else if (userSelection === 's-trim') {
+        recommendationHTML = `
+          <strong>[진단 결과: 최상의 밸런스, S 트림 적극 추천]</strong><br>
+          예산 분배 가치와 유용한 편의 안전 패키지의 조화를 가장 눈여겨보시는 현실적인 오너이십니다.
+          현대자동차 2026 연식 변경에 신규 진입한 S 트림은 사실상 단일 구성만으로 1열 통풍 가죽 시트, HDA 크루즈 제어 등 일상적인 핵심 선호 사양을 남김없이 포괄합니다.
+          여기에 '파킹 어시스트' 옵션 한 가지만 버무려 다이렉트 자금 할부를 일으킨 뒤, 오토캐시백 현금지원 한도 혜택을 최대로 회수하는 방법이 명확한 승리 공식입니다.
+        `;
+      } else if (userSelection === 'exclusive') {
+        recommendationHTML = `
+          <strong>[진단 결과: 패밀리카 최우수 지망, 익스클루시브 트림 적합]</strong><br>
+          동승하는 소중한 아내, 자녀 혹은 부모님의 동반 피로도 절감과 넓은 안전 마진을 신경 쓰시는 다정한 가장 오너십니다.
+          조수석 탑승자를 지탱하는 릴렉션 콤포트 시트 기능 및 사방 충돌 사각지대를 지워내는 서라운드 뷰 스마트 모니터링 체계가 기본 수반됩니다.
+          오토리스 자금을 태워 법인 세무 공제 혜택을 두텁게 노리기에도 중형 차급 내 가장 매력적인 세그먼트 포지션입니다.
+        `;
+      } else if (userSelection === 'inspiration') {
+        recommendationHTML = `
+          <strong>[진단 결과: 완벽한 하이엔드 완성, 인스퍼레이션 트림 권장]</strong><br>
+          한 번 계약하여 길게 타는 차인 만큼, 사소한 수동 조작으로 인한 스트레스나 트림 단계 미련으로 후회하고 싶지 않아 하시는 엘리트 고객님이십니다.
+          독보적인 터치 질감을 자랑하는 최고급 천연 나파 가죽 시트 마감과 미려하게 전방 도로 상황을 수놓는 HUD 투사기, 보스 명품 오디오 전송 채널이 빈틈없이 한데 들어차 있습니다.
+          제작 주문 시 출고 사은품 혜택 및 신차 인도 케어 솔루션이 가장 극대화되어 지급되는 등 품위 있는 현대 라이프에 최고의 동반자가 되어줄 것입니다.
+        `;
+      }
+
+      outputDiv.innerHTML = recommendationHTML;
+
+      // Highlight Active Button
+      const buttons = document.querySelectorAll('.quiz-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+
+    // Interactive Accordion Controller for FAQs
+    document.querySelectorAll('dl dt').forEach((dt) => {
+      dt.addEventListener('click', () => {
+        const dd = dt.nextElementSibling;
+        const expanded = dt.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+          dt.setAttribute('aria-expanded', 'false');
+          dd.style.display = 'none';
+          dt.querySelector('span').textContent = '▼';
+        } else {
+          dt.setAttribute('aria-expanded', 'true');
+          dd.style.display = 'block';
+          dt.querySelector('span').textContent = '▲';
+        }
+      });
+      dt.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dt.click();
+        }
+      });
+    });
+
+    // Form Submission Interactive Response
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      alert('성공적으로 고객님의 쏘나타 하이브리드 맞춤 견적 신청이 완료되었습니다! 전문 오토 플래너가 기재해 주신 연락처를 바탕으로 신속하고 정밀하게 상담 내용을 준비해 올리겠습니다. 잠시만 대기해 주시면 감사하겠습니다.');
+    }
+
+    // Auto run on load to initialize values
+    window.onload = function() {
+      updateCalculator();
+    };
+  </script>
+  
